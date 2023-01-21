@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Epilogue', sans-serif;
+  width: 3.75rem;
+  
+}
+
+.content-wrapper-big {
+  display: flex;
+  min-width: 3.29rem;
+  min-height: 4.16rem;
+  max-width: 6.70rem;
+  
+}
+
+.content-wrapper-small {
+  display: flex;
+  min-width: 3.29rem;
+  min-height: 4.16rem;
+  max-width: 4.70rem;
+  
+}
+
+h3 span {
+  background: #FFFFFF;
+  border-radius: 19px;
+  position: absolute;
+}
