@@ -1,13 +1,33 @@
+:root {
+  --ff-heading: 'Epilogue', sans-serif;
+  --ff-texting: 'Open sans', sans-serif;
+
+  --bg-primary: #28293E;
+  --fc-primary: #FFFFFF;
+  --fc-secondary: #BBB3E6;
+}
+
+body {
+  font-family: var(--ff-texting);
+  width: 3.75rem;
+  background-color: var(--bg-primary);
+  color: var(--fc-primary);
+}
+
+header{
+  font-family: var(--ff-heading);
+}
+
+header h5{
+  color: var(--fc-secondary);
+  text-transform: uppercase;
+}
+/*
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: 'Epilogue', sans-serif;
-  width: 3.75rem;
-  
 }
 
 .content-wrapper-big {
@@ -31,3 +51,4 @@ h3 span {
   border-radius: 19px;
   position: absolute;
 }
+*/
