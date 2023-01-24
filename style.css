@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --ff-heading: 'Epilogue', sans-serif;
   --ff-texting: 'Open sans', sans-serif;
@@ -6,6 +12,7 @@
   --bg-primary: hsl(var(--hue), 22%, 20%);
   --fc-primary: hsl(var(--hue), 0%, 100%);
   --fc-secondary: hsl(var(--hue), 50%, 80%);
+  --fc-secondary-dark: hsl(var(--hue), 100%, 11%);
   font-size: 62.5%;
   --fs-body: 1.6rem;
   --fs-heading: 4.0rem;
@@ -20,8 +27,18 @@ body {
   font-size: var(--fs-body);
 }
 
+.page {
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+img { 
+  width: 100%;
+}
+
 header {
-  font-family: var(--ff-heading);
+  maring-top: 10rem 0 8rem;
+ font-family: var(--ff-heading);
 
   text-align: center;
 }
@@ -41,4 +58,34 @@ header h1 {
   font-weight: 800;
   font-size: var(--fs-heading);
   line-height: 4.8rem;
+}
+
+.card{
+  position: relative; 
+}
+
+.card img {
+  height: 41.6rem;
+  object-fit: cover;
+}
+
+.card h2 {
+  position: absolute;
+  bottom: 5.2rem;
+  left: 2.8rem;
+  font-size: var(--fs-heading);
+  weight: 800;
+}
+
+.card h2 span {
+  border-radius: 2rem;
+  background-color: var(--fc-primary);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  color: var(--fc-secondary-dark);
+  padding: 0 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--ff-heading);
+
 }
