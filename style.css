@@ -5,8 +5,8 @@
 }
 
 :root {
-  --ff-heading: 'Epilogue', sans-serif;
-  --ff-texting: 'Open sans', sans-serif;
+  --ff-heading: "Epilogue", sans-serif;
+  --ff-texting: "Open sans", sans-serif;
 
   --hue: 250;
   --bg-primary: hsl(var(--hue), 22%, 20%);
@@ -14,10 +14,9 @@
   --fc-secondary: hsl(var(--hue), 50%, 80%);
   --fc-secondary-dark: hsl(var(--hue), 100%, 11%, 1);
 
-
   font-size: 62.5%;
   --fs-body: 1.6rem;
-  --fs-heading: 4rem; 
+  --fs-heading: 4rem;
 }
 
 body {
@@ -44,6 +43,9 @@ header {
   font-family: var(--ff-heading);
 
   text-align: center;
+
+  animation-name: topdown;
+  animation-duration: 700ms;
 }
 
 header p {
@@ -67,8 +69,10 @@ header h1 {
 main {
   display: grid;
   gap: 3.2rem;
-  
+
   padding-bottom: 10rem;
+
+  animation: downtop 700ms 100ms backwards;
 }
 
 .card {
@@ -82,6 +86,12 @@ main {
   object-fit: cover;
 
   border-radius: 6px;
+  transition: transform 400ms;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
 }
 
 .card h2 {
@@ -110,4 +120,28 @@ main {
 
   display: inline-flex;
   align-items: center;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
