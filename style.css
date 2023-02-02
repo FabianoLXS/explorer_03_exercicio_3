@@ -33,6 +33,17 @@ body {
   margin: 0 auto;
 }
 
+@media (min-width 700px) {
+  :root {
+    --fs-heading: 5.6rem;
+  }
+
+  .page {
+    max-width: 117rem;
+    padding: 0 5rem;
+   }
+}
+
 img {
   width: 100%;
   height: auto;
@@ -138,6 +149,7 @@ main {
   0% {
     opacity: 0;
     transform: translateY(15px);
+    
   }
 
   100% {
