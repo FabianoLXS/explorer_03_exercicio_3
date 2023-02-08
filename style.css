@@ -16,7 +16,8 @@
 
   font-size: 62.5%;
   --fs-body: 1.6rem;
-  --fs-heading: 4rem;
+  --fs-heading: clamp(4rem, 1rem + 5vw, 5.6rem);
+  /* --fs-heading-sm: clmap(3rem, 0.5rem + 3vw, 4rem) */
 }
 
 body {
@@ -29,20 +30,49 @@ body {
 }
 
 .page {
-  max-width: 33rem;
+  max-width: clamp(33rem, 20rem + 60vw, 117rem);
+  padding: 0 2rem;
   margin: 0 auto;
 }
 
-@media (min-width 700px) {
-  :root {
-    --fs-heading: 5.6rem;
+@media (min-width: 700px) {
+main {
+  grid-template-columns: 1fr 1fr;
+}
+
+.page {
+  /* max-width: 117rem;
+  padding: 0 5rem; */
+
+}
+}
+
+
+@media (min-width: 930px) {
+
+  main {
+    grid-template-areas:
+      "A B B"
+      "C C D";
   }
 
-  .page {
-    max-width: 117rem;
-    padding: 0 5rem;
-   }
+  main div:nth-child(1) {
+    grid-area: A;
+  }
+
+  main div:nth-child(2) {
+    grid-area: B;
+  }
+
+  main div:nth-child(3) {
+    grid-area: C;
+  }
+
+  main div:nth-child(4) {
+    grid-area: D;
+  }
 }
+
 
 img {
   width: 100%;
@@ -98,6 +128,7 @@ main {
 
   border-radius: 6px;
   transition: transform 400ms;
+  filter: brightness(0.8);
 }
 
 .card img:hover {
@@ -149,7 +180,6 @@ main {
   0% {
     opacity: 0;
     transform: translateY(15px);
-    
   }
 
   100% {
